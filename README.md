@@ -1,9 +1,3 @@
-# Getting Started app for Discord
-
-This project contains a basic rock-paper-scissors-style Discord app written in JavaScript, built for the [getting started guide](https://discord.com/developers/docs/getting-started).
-
-![Demo of app](https://github.com/discord/discord-example-app/raw/main/assets/getting-started-demo.gif?raw=true)
-
 ## Project structure
 Below is a basic overview of the project structure:
 
@@ -17,7 +11,7 @@ Below is a basic overview of the project structure:
 ├── .env.sample -> sample .env file
 ├── app.js      -> main entrypoint for app
 ├── commands.js -> slash command payloads + helpers
-├── game.js     -> logic specific to RPS
+├── gag.js     -> logic specific to gag commands
 ├── utils.js    -> utility functions and enums
 ├── package.json
 ├── README.md
@@ -42,7 +36,7 @@ git clone https://github.com/discord/discord-example-app.git
 
 Then navigate to its directory and install dependencies:
 ```
-cd discord-example-app
+cd discord-gag-bot
 npm install
 ```
 ### Get app credentials

@@ -45,3 +45,14 @@ export function getRandomEmoji() {
 export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export async function getVoiceState(guildId, userId) {
+  const endpoint = `guilds/${guildId}/voice-states/${userId}`;
+  try {
+    const res = await DiscordRequest(endpoint, { method: 'GET' });
+    return await res.json();
+  } catch (err) {
+    // 404 = user not connected to voice in this guild
+    return null;
+  }
+}
